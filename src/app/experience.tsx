@@ -1,8 +1,7 @@
-import { PageShell, SiteLink, pageMetadata } from '@/components/PageShell';
+import { PageShell, pageMetadata } from '@/components/PageShell';
 import { Section } from '@/components/Section';
 import { Text } from '@/components/Text';
 import { experience } from '@/content/experience';
-import { profile } from '@/content/profile';
 
 export function generateMetadata() {
   return pageMetadata('Experience', 'Professional and academic AI research experience across mobile, backend, and on-device inference.');
@@ -19,7 +18,6 @@ export default function ExperiencePage() {
           {item.bullets.map((bullet) => <Text key={bullet}>{bullet}</Text>)}
         </Section>
       ))}
-      <SiteLink href={profile.resumeUrl}>View Resume</SiteLink>
     </PageShell>
   );
 }
